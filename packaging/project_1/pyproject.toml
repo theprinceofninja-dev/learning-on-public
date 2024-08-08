@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project_1"
+description = "A test project for packaging"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "LicenseRef-Proprietary" }
+version = "v0.1.0"
+dependencies = []
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = []
+
+[tool.setuptools.package-data]
+
+[tool.mypy]
+plugins = ["sqlmypy", "pydantic.mypy"]
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+testpaths = ["tests"]
