@@ -1,20 +1,20 @@
-# import time
+import time
 
-# import pyautogui
+import pyautogui
 
-# # To use this script, Run it and go to you telegram web app
-# # Click on the Message area. and leave it :)
+# To use this script, Run it and go to you telegram web app
+# Click on the Message area. and leave it :)
 
-# time.sleep(5)
-# for i in range(51):
-#     for (
-#         c
-#     ) in f"h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f":
-#         pyautogui.press(c)
-#     pyautogui.click()
+time.sleep(5)
+for i in range(51):
+    for (
+        c
+    ) in f"h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f.h.f.j.f.G.h.f.k.j.h.G.f.d.h.f.j.f.G.h.f.k.j.h.G.f.d.f":
+        pyautogui.press(c)
+    pyautogui.click()
 
-#     pyautogui.press("Enter")
-#     time.sleep(5)
+    pyautogui.press("Enter")
+    time.sleep(5)
 
 import re
 
