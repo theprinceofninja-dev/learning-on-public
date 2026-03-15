@@ -1,0 +1,342 @@
+# First, let's create a Jupyter Notebook file with various examples
+# This code will generate a .ipynb file that you can use with your students
+
+import base64
+import json
+
+# Create the notebook structure
+notebook = {
+    "cells": [],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3",
+        },
+        "language_info": {
+            "codemirror_mode": {"name": "ipython", "version": 3},
+            "file_extension": ".py",
+            "mimetype": "text/x-python",
+            "name": "python",
+            "nbconvert_exporter": "python",
+            "pygments_lexer": "ipython3",
+            "version": "3.8.0",
+        },
+    },
+    "nbformat": 4,
+    "nbformat_minor": 4,
+}
+
+# Add introduction cell
+intro_cell = {
+    "cell_type": "markdown",
+    "metadata": {},
+    "source": [
+        "# Welcome to Python Programming!\n",
+        "## Interactive Learning Session\n",
+        "\n",
+        "This Jupyter Notebook contains various examples to help you learn Python in a fun and interactive way!\n",
+        "\n",
+        "**Topics we'll cover:**\n",
+        "1. Basic Python operations\n",
+        "2. Data visualization\n",
+        "3. Working with data\n",
+        "4. Interactive widgets\n",
+        "5. Fun animations and games\n",
+        "\n",
+        "To run any cell, click on it and press `Shift+Enter`",
+    ],
+}
+notebook["cells"].append(intro_cell)
+
+# Add basic operations cell
+basic_ops_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Basic Python Operations\n",
+        'print("Hello, Python Learners!")\n',
+        "\n",
+        "# Variables and arithmetic\n",
+        "a = 10\n",
+        "b = 5\n",
+        'print(f"{a} + {b} = {a + b}")\n',
+        'print(f"{a} * {b} = {a * b}")\n',
+        "\n",
+        "# String operations\n",
+        'name = "Python"\n',
+        'print(f"Hello, {name}!")\n',
+        "print(f\"The name '{name}' has {len(name)} characters\")\n",
+        "\n",
+        "# List operations\n",
+        'fruits = ["apple", "banana", "cherry"]\n',
+        'print(f"My favorite fruits: {fruits}")\n',
+        'fruits.append("orange")\n',
+        'print(f"After adding orange: {fruits}")',
+    ],
+}
+notebook["cells"].append(basic_ops_cell)
+
+# Add visualization cell
+viz_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Data Visualization with Matplotlib\n",
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "# Create some data\n",
+        "x = np.linspace(0, 10, 100)\n",
+        "y = np.sin(x)\n",
+        "\n",
+        "# Create the plot\n",
+        "plt.figure(figsize=(10, 5))\n",
+        "plt.plot(x, y, label='sin(x)', color='blue', linewidth=2)\n",
+        "plt.title('Sine Wave')\n",
+        "plt.xlabel('x')\n",
+        "plt.ylabel('sin(x)')\n",
+        "plt.grid(True)\n",
+        "plt.legend()\n",
+        "plt.show()\n",
+        "\n",
+        "# Bar chart example\n",
+        "categories = ['Apples', 'Oranges', 'Bananas', 'G***es']\n",
+        "values = [25, 33, 18, 42]\n",
+        "\n",
+        "plt.figure(figsize=(8, 5))\n",
+        "plt.bar(categories, values, color=['red', 'orange', 'yellow', 'purple'])\n",
+        "plt.title('Fruit Preferences')\n",
+        "plt.ylabel('Number of People')\n",
+        "plt.show()",
+    ],
+}
+notebook["cells"].append(viz_cell)
+
+# Add interactive widgets cell
+widgets_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Interactive Widgets with ipywidgets\n",
+        "import ipywidgets as widgets\n",
+        "from IPython.display import display\n",
+        "\n",
+        "# Create a slider\n",
+        "slider = widgets.IntSlider(\n",
+        "    value=5,\n",
+        "    min=0,\n",
+        "    max=10,\n",
+        "    step=1,\n",
+        "    description='Value:',\n",
+        "    disabled=False,\n",
+        "    continuous_update=True,\n",
+        "    orientation='horizontal',\n",
+        "    readout=True,\n",
+        "    readout_format='d'\n",
+        ")\n",
+        "\n",
+        "# Create a button\n",
+        "button = widgets.Button(\n",
+        "    description='Click me!',\n",
+        "    disabled=False,\n",
+        "    button_style='', # 'success', 'info', 'warning', 'danger' or ''\n",
+        "    tooltip='Click to execute',\n",
+        "    icon='check' # (FontAwesome names without the `fa-` prefix)\n",
+        ")\n",
+        "\n",
+        "# Display the widgets\n",
+        "display(slider)\n",
+        "display(button)\n",
+        "\n",
+        "# Function to handle button click\n",
+        "def on_button_clicked(b):\n",
+        '    print(f"The slider value is: {slider.value}")\n',
+        "\n",
+        "# Link the function to the button\n",
+        "button.on_click(on_button_clicked)",
+    ],
+}
+notebook["cells"].append(widgets_cell)
+
+# Add animation cell
+animation_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Simple Animation with Matplotlib\n",
+        "import matplotlib.pyplot as plt\n",
+        "import matplotlib.animation as animation\n",
+        "import numpy as np\n",
+        "from IPython.display import HTML\n",
+        "\n",
+        "# Set up the figure and axis\n",
+        "fig, ax = plt.subplots(figsize=(8, 6))\n",
+        "x = np.arange(0, 2*np.pi, 0.01)\n",
+        "line, = ax.plot(x, np.sin(x))\n",
+        "ax.set_ylim(-1.5, 1.5)\n",
+        "ax.set_title('Animated Sine Wave')\n",
+        "\n",
+        "# Animation function\n",
+        "def animate(i):\n",
+        "    line.set_ydata(np.sin(x + i/10.0))  # update the data\n",
+        "    return line,\n",
+        "\n",
+        "# Create animation\n",
+        "ani = animation.FuncAnimation(fig, animate, frames=100, interval=50, blit=True)\n",
+        "\n",
+        "# Display the animation\n",
+        "plt.close(fig)  # Prevents duplicate display\n",
+        "HTML(ani.to_jshtml())",
+    ],
+}
+notebook["cells"].append(animation_cell)
+
+# Add data analysis cell
+data_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Working with Data using Pandas\n",
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "\n",
+        "# Create sample data\n",
+        "data = {\n",
+        "    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n",
+        "    'Age': [25, 30, 35, 40, 45],\n",
+        "    'City': ['New York', 'London', 'Paris', 'Tokyo', 'Sydney'],\n",
+        "    'Salary': [50000, 60000, 70000, 80000, 90000]\n",
+        "}\n",
+        "\n",
+        "# Create DataFrame\n",
+        "df = pd.DataFrame(data)\n",
+        'print("Original DataFrame:")\n',
+        "display(df)\n",
+        "\n",
+        "# Basic data analysis\n",
+        'print("\\nBasic Statistics:")\n',
+        "print(f\"Average age: {df['Age'].mean():.2f}\")\n",
+        "print(f\"Maximum salary: {df['Salary'].max()}\")\n",
+        'print(f"Number of people: {len(df)}")\n',
+        "\n",
+        "# Filtering data\n",
+        'print("\\nPeople older than 30:")\n',
+        "older_than_30 = df[df['Age'] > 30]\n",
+        "display(older_than_30)\n",
+        "\n",
+        "# Adding a new column\n",
+        "df['Bonus'] = df['Salary'] * 0.1\n",
+        'print("\\nDataFrame with Bonus column:")\n',
+        "display(df)",
+    ],
+}
+notebook["cells"].append(data_cell)
+
+# Add fun game cell
+game_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "metadata": {},
+    "outputs": [],
+    "source": [
+        "# Simple Number Guessing Game\n",
+        "import random\n",
+        "\n",
+        "def number_guessing_game():\n",
+        '    print("Welcome to the Number Guessing Game!")\n',
+        '    print("I\'m thinking of a number between 1 and 100.")\n',
+        "    \n",
+        "    # Generate random number\n",
+        "    secret_number = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "    max_attempts = 7\n",
+        "    \n",
+        "    while attempts < max_attempts:\n",
+        "        try:\n",
+        '            guess = int(input(f"\\nAttempt {attempts + 1}/{max_attempts}. Enter your guess: "))\n',
+        "            \n",
+        "            if guess < secret_number:\n",
+        '                print("Too low! Try a higher number.")\n',
+        "            elif guess > secret_number:\n",
+        '                print("Too high! Try a lower number.")\n',
+        "            else:\n",
+        '                print(f"\\nCongratulations! You guessed the number {secret_number} in {attempts + 1} attempts!")\n',
+        "                return\n",
+        "            \n",
+        "            attempts += 1\n",
+        "            \n",
+        "        except ValueError:\n",
+        '            print("Please enter a valid number!")\n',
+        "    \n",
+        '    print(f"\\nGame over! The number was {secret_number}. Better luck next time!")\n',
+        "\n",
+        "# Uncomment the next line to play the game\n",
+        "# number_guessing_game()",
+    ],
+}
+notebook["cells"].append(game_cell)
+
+# Add final project idea cell
+project_cell = {
+    "cell_type": "markdown",
+    "metadata": {},
+    "source": [
+        "# Final Project Idea: Personal Data Analysis\n",
+        "\n",
+        "Now that you've learned some Python basics, try creating a personal data analysis project!\n",
+        "\n",
+        "**Steps:**\n",
+        "1. Collect some data about your daily activities (e.g., hours spent on different tasks, mood ratings, etc.)\n",
+        "2. Create a Python dictionary or list to store this data\n",
+        "3. Use pandas to analyze the data\n",
+        "4. Create visualizations to show patterns or trends\n",
+        "5. Share your findings with others!\n",
+        "\n",
+        "**Example:**\n",
+        "```python\n",
+        "# Sample code structure\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Your data collection\n",
+        "data = {\n",
+        "    'Day': ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],\n",
+        "    'Study Hours': [4, 3, 5, 2, 6],\n",
+        "    'Sleep Hours': [7, 8, 6, 7, 8],\n",
+        "    'Mood': [3, 4, 2, 5, 4]  # On a scale of 1-5\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "print(df)\n",
+        "\n",
+        "# Create a visualization\n",
+        "plt.figure(figsize=(10, 5))\n",
+        "plt.plot(df['Day'], df['Study Hours'], marker='o', label='Study Hours')\n",
+        "plt.plot(df['Day'], df['Sleep Hours'], marker='s', label='Sleep Hours')\n",
+        "plt.legend()\n",
+        "plt.title('My Weekly Schedule')\n",
+        "plt.show()\n",
+        "```\n",
+        "\n",
+        "Happy coding! 🐍",
+    ],
+}
+notebook["cells"].append(project_cell)
+
+# Save the notebook to a file
+with open("python_learning_session.ipynb", "w") as f:
+    json.dump(notebook, f, indent=2)
+
+print("Jupyter Notebook created successfully!")
+print("File saved as 'python_learning_session.ipynb'")

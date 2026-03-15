@@ -1,0 +1,14 @@
+{
+    "workbench.colorCustomizations": {
+    "editor.background": "#000000",
+    "sideBar.background": "#000000",
+    "sideBarTitle.foreground": "#ffffff",
+    "sideBarSectionHeader.background": "#444444"
+  },
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+
+}
