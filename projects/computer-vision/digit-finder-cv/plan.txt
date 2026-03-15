@@ -1,0 +1,6 @@
+#1- Continues Screenshot               [Done]
+#2- Blur(meadean filter) or Darken  
+#3- OBjct detatction
+#4- object Size detection
+#5- choose small sizes
+#6- Draw rectangle around smal sizes

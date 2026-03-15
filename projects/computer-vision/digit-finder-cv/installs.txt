@@ -1,0 +1,6 @@
+#Notes, Installation:
+# pip install numpy
+# pip install pyautogui
+# pip install opencv-python
+# sudo apt-get install scrot
+# sudo apt-get install python3-tk
