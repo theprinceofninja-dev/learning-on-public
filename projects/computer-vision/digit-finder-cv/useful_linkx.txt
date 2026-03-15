@@ -1,0 +1,26 @@
+https://www.tutorialspoint.com/how-to-place-an-image-into-a-frame-in-tkinter#
+https://stackoverflow.com/questions/36669266/can-i-write-a-smoothly-running-snake-game-with-tkinter
+https://stackoverflow.com/questions/28670461/read-an-image-with-opencv-and-display-it-with-tkinter
+https://pyimagesearch.com/2021/02/22/opencv-connected-component-labeling-and-analysis/
+https://pyimagesearch.com/2018/01/01/taking-screenshots-with-opencv-and-python/
+https://techtutorialsx.com/2018/06/02/python-opencv-converting-an-image-to-gray-scale/
+https://note.nkmk.me/en/python-numpy-opencv-image-binarization/
+https://www.geeksforgeeks.org/python-opencv-morphological-operations/
+python image processing increase thinkness
+https://pythonguides.com/python-screen-capture/
+https://stackoverflow.com/questions/43009527/how-to-insert-an-image-in-a-canvas-item
+https://stackoverflow.com/questions/65290953/how-do-i-use-the-create-image-in-tkinter-in-python
+https://www.google.com/search?channel=fs&client=ubuntu&q=python+get+current+line
+https://techtutorialsx.com/2019/04/13/python-opencv-converting-image-to-black-and-white/
+https://www.tutorialspoint.com/how-to-update-an-image-in-a-tkinter-canvas
+https://stackoverflow.com/questions/12250117/how-to-draw-images-in-tkinter-window
+https://www.geeksforgeeks.org/python-opencv-cv2-blur-method/
+https://stackhowto.com/how-to-change-label-text-on-button-click-in-tkinter/
+https://stackoverflow.com/questions/67445320/how-to-move-a-rectangle-in-x-and-y-pixels-position-with-tkinter
+https://pythonprogramming.altervista.org/moving-a-rectangle-on-the-canvas-in-tkinter
+https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_rectangle.html
+https://stackoverflow.com/questions/54637795/how-to-make-a-tkinter-canvas-rectangle-transparent
+https://stackoverflow.com/questions/22925599/mouse-position-python-tkinter
+https://www.tutorialspoint.com/how-to-get-the-screen-size-in-tkinter
+https://stackoverflow.com/questions/3482081/how-to-update-the-image-of-a-tkinter-label-widget
+https://stackoverflow.com/questions/17815686/detect-key-input-in-python

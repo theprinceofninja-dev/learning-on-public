@@ -1,0 +1,43 @@
+1- JSON parser
+    input
+    give output
+
+2- JSON validator
+    rules:
+        1- field exist in some Context
+        2- field in some format
+        3- field values in list/range
+
+input
+queries
+give output: .field1  (only for values, not groups)
+check validity: .field1 / exist
+
+Validation Function:
+
+Target Data:
+    Field of interest
+
+Full Data:
+    Json
+
+Context:
+    How to reach target data
+
+{
+    "field1":"value1",
+    "field2":{
+        "f":1,
+        "g":2
+    }
+}
+
+Validation rules:
+{
+    ".field1":{
+        "values":[a-z0-9]
+    },
+    ".field2.f":{
+        "values":"0-11"
+    }
+}
